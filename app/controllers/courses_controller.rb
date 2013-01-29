@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
   def index
+    
   end
   def create
     @course = current_user.courses.build(params[:course])

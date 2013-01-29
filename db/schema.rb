@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20130122182622) do
   create_table "courses", :force => true do |t|
     t.string   "name"
     t.integer  "creator"
+    t.integer "students"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
