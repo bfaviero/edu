@@ -1,4 +1,10 @@
 Edu::Application.routes.draw do
+  resources :votes
+
+
+  resources :registrations
+
+
   resources :users
   resources :courses, only: [:create, :destroy] 
   resources :sessions, only: [:new, :create, :destroy]
