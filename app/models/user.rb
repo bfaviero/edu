@@ -11,7 +11,10 @@
 
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
-  has_and_belongs_to_many :courses
+
+  has_many :registrations
+  has_many :courses, :through => :registrations
+  has_many :votes
   has_secure_password
   
   before_save { |user| user.email = email.downcase }
