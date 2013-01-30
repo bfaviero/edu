@@ -1,4 +1,8 @@
 Edu::Application.routes.draw do
+  get "registration/user:string"
+
+  get "registration/course:string"
+
   resources :users
   resources :courses, only: [:create, :destroy] 
   resources :sessions, only: [:new, :create, :destroy]
