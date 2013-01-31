@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130122182622) do
+ActiveRecord::Schema.define(:version => 20130131060227) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
     t.integer  "creator"
-    t.integer "students"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "registrations", :force => true do |t|
+    t.string   "user"
+    t.string   "course"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -32,5 +38,14 @@ ActiveRecord::Schema.define(:version => 20130122182622) do
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "votes", :force => true do |t|
+    t.integer  "user"
+    t.string   "course"
+    t.integer  "value"
+    t.datetime "when"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

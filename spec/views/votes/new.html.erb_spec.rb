@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "votes/new" do
   before(:each) do
     assign(:vote, stub_model(Vote,
-      :user => "MyString",
+      :user => 1,
       :course => "MyString",
       :value => 1
     ).as_new_record)

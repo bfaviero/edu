@@ -7,6 +7,7 @@ Edu::Application.routes.draw do
 
   resources :users
   resources :courses
+  resources :votes
   resources :sessions, only: [:new, :create, :destroy]
   root              to: "static_pages#home"
   match '/signin',  to: 'sessions#new'

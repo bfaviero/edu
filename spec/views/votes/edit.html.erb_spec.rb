@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "votes/edit" do
   before(:each) do
     @vote = assign(:vote, stub_model(Vote,
-      :user => "MyString",
+      :user => 1,
       :course => "MyString",
       :value => 1
     ))
