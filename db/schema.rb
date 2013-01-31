@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130131060227) do
     t.boolean  "admin"
   end
 
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
   create_table "votes", :force => true do |t|
