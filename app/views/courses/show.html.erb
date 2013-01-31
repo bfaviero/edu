@@ -1,0 +1,21 @@
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+
+
+<p>
+  <label for="amount">How much I understand:</label>
+  <input type="text" id="amount" placeholder="amount..." style="border: 0; color: #f6931f; font-weight: bold;" />
+</p>
+ 
+<div id="slider"></div>
+
+<p>
+<br>
+Inline Sparkline: <span id="sparkline"></span>.
+</p>
+
+
+<% Vote.all.each do |vote| %>
+              <br><br><a style="margin:10px; width:150px;" class="btn btn-large btn-success" href="#"><%= vote.user %></a>
+
+      <%end%>
