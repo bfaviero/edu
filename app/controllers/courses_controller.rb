@@ -1,5 +1,9 @@
 class CoursesController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
+  def show
+    @course = Course.find(params[:id])
+  end
+
   def index
     
   end
@@ -15,5 +19,7 @@ class CoursesController < ApplicationController
 
   def destroy
   end
+
+
 
 end
