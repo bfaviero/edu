@@ -10,7 +10,10 @@
       <div class="newclass" id="classbutton">
         <h1>Choose your class</h1>
         <p><hr></p>
-        <a class="btn btn-large btn-success" href="#">Click here to enter a new class</a>
+      <% Course.all.each do |course| %>
+              <br><br><a style="margin:10px; width:150px;" class="btn btn-large btn-success" href="#"><%= course.name %></a>
+
+      <%end%>
       </div>
       
       <div class="boxclass">
@@ -31,12 +34,7 @@
           <h4></h4>
           <p></p>
         </div>
-
-        <div class="span6">
-          <div class="jumbotron">
-            <!--<p class="lead"></p>-->
-            <a href="#">Start a new class or tutorial section</a>
-          </div>
+       
 
           <h4></h4>
           <p></p>
@@ -47,6 +45,7 @@
       </div>
 
       <hr>
+
 
 
     </div> <!-- /container -->
