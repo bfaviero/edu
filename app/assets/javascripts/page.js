@@ -29,7 +29,7 @@ $(function() {
 	$( "#slider" ).on( "slidechange", function( event, ui ) {
    		$.ajax({
 	      		data: {vote:{user:'bruno', value:4}},
-				url: "/votes/create.json",
+				url: "/votes/create.json", //do we need to pass it params here?
 				type: "POST",
 				dataType: "json"	
 			});
